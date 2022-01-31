@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: IBM Plex Mono;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #171717;
+    scrollbar-width: none;
+    color: #dadada;
+}
+nav{
+    position: sticky;
+    z-index: 200;
+    top: 0px;
+    height: 12vh;
+    background-color: #111111;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 100px;
+    /* margin: 20px; */
+}
+nav h5{
+    font-size: 25px;
+    padding-left: 26px;
+    color: #FBF12C;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: #111111;
+}
+nav a{
+    text-decoration: none;
+}
+nav:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #FBF12C;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+nav:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+@media screen and (max-height: 300px) {
+    ul {
+        margin-top: 40px;
+    }
+}
+.paper{
+  position: absolute;
+  left: 100px;
+  align-self: center;
+}
+.paper img{
+  transform: rotate(340deg);
+}
+
+/* ----------- Section-1 ------------ */
+
+.container1{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+.aboutme h1{
+    color: #FBF12C;
+    font-weight: normal;
+    font-size: 50px;
+}
+.aboutme{
+    /* position: absolute; */
+    width: 200px;
+    /* left: 50px;
+    top: 200px; */
+    color: #E5E5E5;
+}
+.aboutme h3{
+    font-style: 20px;
+    font-weight: normal;
+}
+.myimg img{
+    border-radius: 100%;
+    height: 350px;
+    padding-left: 50px;
+}
+.interests{
+    color: #E5E5E5;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+}
+.interests p{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    height: 50px;
+}
+.interests img{
+    float: left;
+}
