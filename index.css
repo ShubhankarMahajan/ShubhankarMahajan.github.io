@@ -12,6 +12,23 @@ body{
     scrollbar-width: none;
     color: #dadada;
 }
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #171717;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #111111; 
+}
+/* Navigation Bar */
 nav{
     position: sticky;
     z-index: 200;
@@ -67,8 +84,85 @@ nav:hover:after {
   transform: rotate(340deg);
 }
 
-/* ----------- Section-1 ------------ */
+/* Down Arrows */
+/* Arrow 1 */
+.arrow{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #FBF12C;
+    border-right: 5px solid #FBF12C;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
 
+/* Arrow 2 */
+.arrow-2{
+    position: absolute;
+    top: 190%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow-2 span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #FBF12C;
+    border-right: 5px solid #FBF12C;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow-2 span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow-2 span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+/* ----------- Section-1 ------------ */
+#section1{
+    height: 87vh;
+}
 .container1{
     margin-top: 10vh;
     display: flex;
@@ -113,4 +207,51 @@ nav:hover:after {
 }
 .interests img{
     float: left;
+}
+/* ----------- Section-2 ------------ */
+#section2{
+    height: 87vh;
+    padding: 2%;
+}
+#section2 h1{
+    text-align: center;
+    font-size: xx-large;
+}
+.boxes{
+    display: flex;
+    padding: 50px 50px 0px 50px;
+    justify-content: space-around;
+}
+.box1,.box2{
+    width: 400px;
+    padding: 20px;
+    padding-top: 0px;
+    /* text-align: center; */
+}
+.box1 p,.box2 p{
+    color: #E5E5E5;
+    padding: 20px;
+    /* font-weight: normal;
+    font-style: normal; */
+}
+.box1 img{
+    padding-left: 140px;
+}
+.box1 a,.box2 a{
+    text-decoration: none;
+}
+.vl {
+    border-left: 2px solid #FBF12C;
+    height: 350px;
+  }
+.Hackathon{
+    width: 400px;
+    padding: 20px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Hackathon img{
+    align-items: center;
 }
