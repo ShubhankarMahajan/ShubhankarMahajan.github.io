@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: IBM Plex Mono;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #171717;
+    color: #dadada;
+}
+nav{
+    position: sticky;
+    top: 0px;
+    height: 12vh;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #FBF12C;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+nav:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+@media screen and (max-height: 300px) {
+      ul {
+          margin-top: 40px;
+      }
+  }
+.paper{
+    position: absolute;
+    left: 50vw;
+    background-color: transparent;
+}
+#cer1, #cer2, #cer3, #cer4, #cer5, #cer6, #cer7, #cer8, #cer9{
+    /* text-align: center; */
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+#cer1 h3, #cer2 h3, #cer3 h3, #cer4 h3, #cer5 h3, #cer6 h3, #cer7 h3, #cer8 h3, #cer9 h3{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+}
+#cer1 a, #cer2 a, #cer3 a, #cer4 a, #cer5 a, #cer6 a, #cer7 a, #cer8 a, #cer9 a{
+    padding-top: 30px;
+    width: 720px;
+    align-self: center;
+}
+.to-top{
+    color:white;
+    padding-top:1.8em;
+    display:inline-block;/* or block */
+    position: absolute;
+    left: 50px;
+    border-color:white;
+    text-decoration:none;
+    transition:all .3s ease-out;
+}
+.to-top:before{
+    content:'▲';
+    font-size:20px;
+    text-align: center;
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-.7em;
+    border:solid .13em white;
+    border-radius:10em;
+    width:30px;
+    height:30px;
+    line-height:1.3em;
+    border-color:inherit;
+    transition:transform .5s ease-in;
+}
+.to-top:hover{
+    color:#FBF12C;
+    border-color:#FBF12C;
+}
+.to-top:hover:before{
+    transform: rotate(630deg);
+}
+footer{
+    height: 12vh;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+footer img{
+    padding-left: 20px;
+}
